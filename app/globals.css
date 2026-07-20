@@ -178,13 +178,13 @@ summary {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(420px, 0.78fr);
-  gap: clamp(2rem, 5vw, 6.5rem);
+  grid-template-columns: minmax(0, 1.08fr) minmax(420px, 0.72fr);
+  gap: clamp(2rem, 4vw, 5rem);
   align-items: center;
-  width: min(100%, var(--max-width));
+  width: min(100%, 1600px);
   min-height: calc(100svh - 86px);
   margin: 0 auto;
-  padding: clamp(3.5rem, 7vw, 7.5rem) var(--page-padding);
+  padding: clamp(2.5rem, 5.2svh, 4.75rem) var(--page-padding);
 }
 
 .hero-copy {
@@ -224,8 +224,8 @@ p {
 
 h1 {
   max-width: 840px;
-  margin-bottom: 2rem;
-  font-size: clamp(3.2rem, 6.1vw, 6.75rem);
+  margin-bottom: clamp(1.35rem, 2.6svh, 2rem);
+  font-size: clamp(3.5rem, min(4.9vw, 8.5svh), 6.35rem);
   font-weight: 400;
   letter-spacing: -0.058em;
   line-height: 0.97;
@@ -233,10 +233,10 @@ h1 {
 
 .hero-text {
   max-width: 680px;
-  margin-bottom: 2.4rem;
+  margin-bottom: clamp(1.35rem, 2.8svh, 2.4rem);
   color: var(--muted);
-  font-size: clamp(1.08rem, 1.45vw, 1.32rem);
-  line-height: 1.75;
+  font-size: clamp(1rem, min(1.25vw, 2.15svh), 1.22rem);
+  line-height: 1.65;
 }
 
 .hero-actions {
@@ -287,7 +287,7 @@ h1 {
 .hero-note {
   display: flex;
   gap: 1.7rem;
-  margin-top: clamp(2.5rem, 7vh, 5rem);
+  margin-top: clamp(1.5rem, 4svh, 3rem);
   color: var(--muted);
   font-size: 0.72rem;
   font-weight: 650;
@@ -306,8 +306,10 @@ h1 {
 
 .hero-visual {
   position: relative;
-  align-self: stretch;
-  min-height: 660px;
+  align-self: center;
+  width: 100%;
+  height: clamp(470px, calc(100svh - 180px), 780px);
+  min-height: 0;
 }
 
 .portrait-frame {
@@ -939,7 +941,8 @@ h1 {
   }
 
   .hero-visual {
-    min-height: 590px;
+    height: clamp(460px, calc(100svh - 180px), 650px);
+    min-height: 0;
   }
 
   .signals,
@@ -985,6 +988,7 @@ h1 {
   }
 
   .hero-visual {
+    height: auto;
     min-height: min(760px, 118vw);
   }
 

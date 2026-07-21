@@ -1,34 +1,51 @@
+import {
+  ArrowRight,
+  Blocks,
+  CloudSun,
+  Compass,
+  Heart,
+  HeartHandshake,
+  MapPin,
+  MessageCircle,
+  MessagesSquare,
+  RefreshCcw,
+  School,
+  Search,
+  Sprout,
+  UserRound,
+} from "lucide-react";
+
 const whatsappUrl =
   "https://wa.me/5543998421200?text=Ol%C3%A1%2C%20Yara.%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20atendimento%20psicol%C3%B3gico%20infantil.";
 
 const signs = [
   {
-    number: "01",
+    icon: RefreshCcw,
     title: "Mudanças persistentes de comportamento",
     text: "Irritabilidade, agressividade, choro frequente ou reações que passaram a interferir na rotina.",
   },
   {
-    number: "02",
+    icon: CloudSun,
     title: "Medos e ansiedade",
     text: "Preocupações intensas, dificuldade para se separar dos responsáveis ou insegurança que limita a criança.",
   },
   {
-    number: "03",
+    icon: UserRound,
     title: "Isolamento ou perda de interesse",
     text: "Menos vontade de brincar, conversar ou participar de atividades que antes faziam parte do dia a dia.",
   },
   {
-    number: "04",
+    icon: Heart,
     title: "Dificuldade para lidar com emoções",
     text: "Crises intensas, frustração difícil de regular ou sentimentos que a criança ainda não consegue nomear.",
   },
   {
-    number: "05",
+    icon: School,
     title: "Desafios na escola e nas relações",
     text: "Dificuldades de adaptação, convivência, aprendizagem ou mudanças percebidas por família e escola.",
   },
   {
-    number: "06",
+    icon: Sprout,
     title: "Momentos de mudança",
     text: "Separações, luto, chegada de irmãos, mudança de escola ou outras situações que exigem nova adaptação.",
   },
@@ -180,15 +197,21 @@ export default function Home() {
 
         <section className="clarity-strip" aria-label="Áreas centrais do atendimento">
           <div>
-            <span>01</span>
+            <span className="item-icon clarity-icon" aria-hidden="true">
+              <Blocks strokeWidth={1.7} />
+            </span>
             <p>Psicologia infantil</p>
           </div>
           <div>
-            <span>02</span>
+            <span className="item-icon clarity-icon" aria-hidden="true">
+              <HeartHandshake strokeWidth={1.7} />
+            </span>
             <p>Participação da família</p>
           </div>
           <div>
-            <span>03</span>
+            <span className="item-icon clarity-icon" aria-hidden="true">
+              <MapPin strokeWidth={1.7} />
+            </span>
             <p>Atendimento em Londrina</p>
           </div>
         </section>
@@ -209,15 +232,21 @@ export default function Home() {
           </div>
 
           <div className="signals-list">
-            {signs.map((sign) => (
-              <article className="signal-row" key={sign.number}>
-                <span>{sign.number}</span>
-                <div>
-                  <h3>{sign.title}</h3>
-                  <p>{sign.text}</p>
-                </div>
-              </article>
-            ))}
+            {signs.map((sign) => {
+              const SignIcon = sign.icon;
+
+              return (
+                <article className="signal-row" key={sign.title}>
+                  <span className="item-icon signal-icon" aria-hidden="true">
+                    <SignIcon strokeWidth={1.7} />
+                  </span>
+                  <div>
+                    <h3>{sign.title}</h3>
+                    <p>{sign.text}</p>
+                  </div>
+                </article>
+              );
+            })}
           </div>
         </section>
 
@@ -249,7 +278,9 @@ export default function Home() {
             </p>
             <div className="therapy-points">
               <div>
-                <span>01</span>
+                <span className="item-icon therapy-icon" aria-hidden="true">
+                  <Heart strokeWidth={1.7} />
+                </span>
                 <h3>Expressão emocional</h3>
                 <p>
                   Histórias, jogos e brincadeiras dão forma a sentimentos e
@@ -257,7 +288,9 @@ export default function Home() {
                 </p>
               </div>
               <div>
-                <span>02</span>
+                <span className="item-icon therapy-icon" aria-hidden="true">
+                  <Search strokeWidth={1.7} />
+                </span>
                 <h3>Compreensão do comportamento</h3>
                 <p>
                   A observação clínica considera o contexto, o desenvolvimento e a
@@ -265,7 +298,9 @@ export default function Home() {
                 </p>
               </div>
               <div>
-                <span>03</span>
+                <span className="item-icon therapy-icon" aria-hidden="true">
+                  <Compass strokeWidth={1.7} />
+                </span>
                 <h3>Estratégias possíveis</h3>
                 <p>
                   O processo ajuda a construir maneiras mais adequadas de lidar com
@@ -381,7 +416,9 @@ export default function Home() {
 
           <ol className="start-steps">
             <li>
-              <span>01</span>
+              <span className="item-icon start-icon" aria-hidden="true">
+                <MessageCircle strokeWidth={1.7} />
+              </span>
               <div>
                 <h3>Envie uma mensagem</h3>
                 <p>
@@ -391,7 +428,9 @@ export default function Home() {
               </div>
             </li>
             <li>
-              <span>02</span>
+              <span className="item-icon start-icon" aria-hidden="true">
+                <MessagesSquare strokeWidth={1.7} />
+              </span>
               <div>
                 <h3>Converse sobre a demanda</h3>
                 <p>
@@ -401,7 +440,9 @@ export default function Home() {
               </div>
             </li>
             <li>
-              <span>03</span>
+              <span className="item-icon start-icon" aria-hidden="true">
+                <ArrowRight strokeWidth={1.7} />
+              </span>
               <div>
                 <h3>Definam os próximos passos</h3>
                 <p>

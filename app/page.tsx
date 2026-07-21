@@ -14,6 +14,7 @@ import {
   Sprout,
   UserRound,
 } from "lucide-react";
+import { FaInstagram, FaWhatsapp } from "react-icons/fa6";
 
 const whatsappUrl =
   "https://wa.me/5543998421200?text=Ol%C3%A1%2C%20Yara.%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20atendimento%20psicol%C3%B3gico%20infantil.";
@@ -128,7 +129,8 @@ export default function Home() {
             target="_blank"
             rel="noreferrer"
           >
-            Agendar conversa <span aria-hidden="true">↗</span>
+            Agendar conversa
+            <FaWhatsapp className="social-icon" aria-hidden="true" />
           </a>
         </div>
       </header>
@@ -157,7 +159,8 @@ export default function Home() {
                 target="_blank"
                 rel="noreferrer"
               >
-                Agendar uma conversa <span aria-hidden="true">→</span>
+                Agendar uma conversa
+                <FaWhatsapp className="social-icon" aria-hidden="true" />
               </a>
               <a className="text-link" href="#quando-procurar">
                 Quando procurar ajuda? <span aria-hidden="true">↓</span>
@@ -327,7 +330,8 @@ export default function Home() {
               target="_blank"
               rel="noreferrer"
             >
-              Conversar com a Yara <span aria-hidden="true">→</span>
+              Conversar com a Yara
+              <FaWhatsapp className="social-icon" aria-hidden="true" />
             </a>
           </div>
           <div className="family-image-wrap">
@@ -392,7 +396,8 @@ export default function Home() {
                 target="_blank"
                 rel="noreferrer"
               >
-                Acompanhar no Instagram <span aria-hidden="true">↗</span>
+                <FaInstagram className="social-icon" aria-hidden="true" />
+                Acompanhar no Instagram
               </a>
               <a href="#primeiro-contato">
                 Como começar <span aria-hidden="true">↓</span>
@@ -488,7 +493,8 @@ export default function Home() {
               target="_blank"
               rel="noreferrer"
             >
-              Falar com a Yara no WhatsApp <span aria-hidden="true">↗</span>
+              Falar com a Yara no WhatsApp
+              <FaWhatsapp className="social-icon" aria-hidden="true" />
             </a>
           </div>
         </section>
@@ -515,10 +521,12 @@ export default function Home() {
               target="_blank"
               rel="noreferrer"
             >
-              Instagram ↗
+              <FaInstagram className="social-icon" aria-hidden="true" />
+              Instagram
             </a>
             <a href={whatsappUrl} target="_blank" rel="noreferrer">
-              WhatsApp ↗
+              <FaWhatsapp className="social-icon" aria-hidden="true" />
+              WhatsApp
             </a>
           </div>
         </div>
@@ -534,7 +542,8 @@ export default function Home() {
         target="_blank"
         rel="noreferrer"
       >
-        Agendar conversa <span aria-hidden="true">↗</span>
+        Agendar conversa
+        <FaWhatsapp className="social-icon" aria-hidden="true" />
       </a>
 
       <script

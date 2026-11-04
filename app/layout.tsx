@@ -15,12 +15,14 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     metadataBase,
-    title: "Yara Nicolette | Psicóloga Infantil em Londrina",
+    title: "Yara Nicolette | Neuropsicóloga Infantil em Londrina",
     description:
-      "Psicologia infantil em Londrina para compreender emoções, comportamentos e desafios do desenvolvimento, com participação da família.",
+      "Psicoterapia infantojuvenil, avaliação neuropsicológica de 6 a 16 anos e psicoeducação parental em Londrina. Conheça o trabalho de Yara Nicolette.",
     keywords: [
       "psicóloga infantil em Londrina",
       "psicologia infantil",
+      "avaliação neuropsicológica em Londrina",
+      "psicoeducação parental",
       "terapia infantil",
       "Yara Nicolette",
       "desenvolvimento emocional infantil",
@@ -35,24 +37,24 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       type: "website",
       locale: "pt_BR",
-      title: "Yara Nicolette | Psicóloga Infantil em Londrina",
+      title: "Yara Nicolette | Neuropsicóloga Infantil em Londrina",
       description:
-        "Psicologia infantil para compreender o que seu filho ainda não consegue dizer.",
-      siteName: "Yara Nicolette — Psicóloga Infantil",
+        "Por trás de cada comportamento, existe uma criança que precisa ser compreendida.",
+      siteName: "Yara Nicolette — Neuropsicóloga Infantil",
       images: [
         {
           url: "/og.png",
           width: 1200,
           height: 630,
-          alt: "Yara Nicolette — Psicóloga Infantil em Londrina",
+          alt: "Yara Nicolette — Neuropsicóloga Infantil em Londrina",
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: "Yara Nicolette | Psicóloga Infantil em Londrina",
+      title: "Yara Nicolette | Neuropsicóloga Infantil em Londrina",
       description:
-        "Psicologia infantil para compreender o que seu filho ainda não consegue dizer.",
+        "Por trás de cada comportamento, existe uma criança que precisa ser compreendida.",
       images: ["/og.png"],
     },
   };
